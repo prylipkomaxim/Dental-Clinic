@@ -106,3 +106,24 @@ document.addEventListener('DOMContentLoaded', () => {
         childActivitiesForwardNextPart ();
     }
 })
+new Swiper('.stock__items-block',{
+    slidesPerView:3,
+    spaceBetween:30,
+
+    navigation: {
+        prevEl: '.stock__proposes-button_prev',
+        nextEl: '.stock__proposes-button_next'
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView:1,
+        },
+        768: {
+            slidesPerView:2,
+        },
+        1024: {
+            slidesPerView:3,
+        }
+    },
+})
