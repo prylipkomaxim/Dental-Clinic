@@ -126,7 +126,8 @@ new Swiper('.stock__items-block',{
             slidesPerView:3,
         }
     },
-})
+});
+
 const stockPopupBtns = document.querySelectorAll('.stock__item-btn');
 const stockPopupClose = document.querySelector('.stock-popup__close');
 const stockPopup = document.querySelector('.stock-popup');
@@ -170,3 +171,28 @@ if (servicesPopupBtns && servicesPopup) {
         }
     })
 }
+function tab () {
+    const tabNav = document.querySelectorAll('.doctors__persons-item');
+    const tabContent = document.querySelectorAll('.doctors__persons-description-item');
+
+    tabNav.forEach(item => {
+        item.addEventListener('click', selectTabNav)
+    });
+
+    function selectTabNav () {
+        tabNav.forEach(item => {
+            item.classList.remove('is-active');
+        });
+        this.classList.add('is-active');
+        const tabName = this.getAttribute('data-tab-name');
+        selectTabContent (tabName);
+    };
+
+    function selectTabContent (tabName) {
+        tabContent.forEach(item => {
+            item.classList.contains(tabName) ? item.classList.add('is-active') : item.classList.remove('is-active')
+        });
+    }
+};
+
+tab ();
