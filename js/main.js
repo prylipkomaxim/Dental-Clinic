@@ -128,6 +128,26 @@ new Swiper('.stock__items-block',{
     },
 });
 
+new Swiper('.reviews__items-block ',{
+    slidesPerView:2,
+    spaceBetween:30,
+
+    navigation: {
+        prevEl: '.reviews__arrow_left',
+        nextEl: '.reviews__arrow_right'
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView:1,
+        },
+        768: {
+            slidesPerView:2,
+        },
+    },
+});
+
+
 const stockPopupBtns = document.querySelectorAll('.stock__item-btn');
 const stockPopupClose = document.querySelector('.stock-popup__close');
 const stockPopup = document.querySelector('.stock-popup');
