@@ -147,6 +147,31 @@ new Swiper('.reviews__items-block ',{
     },
 });
 
+new Swiper('.lisences__items-block ',{
+    slidesPerView:4,
+
+    navigation: {
+        prevEl: '.lisences__arrow_left',
+        nextEl: '.lisences__arrow_right'
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView:1,
+        },
+        768: {
+            slidesPerView:2,
+        },
+        1024: {
+            slidesPerView:3,
+        },
+        1320: {
+            slidesPerView:4,
+        }
+    },
+});
+
+
 
 const stockPopupBtns = document.querySelectorAll('.stock__item-btn');
 const stockPopupClose = document.querySelector('.stock-popup__close');
