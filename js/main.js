@@ -171,6 +171,29 @@ new Swiper('.lisences__items-block ',{
     },
 });
 
+new Swiper('.about__gallery-block',{
+    slidesPerView:4,
+
+    navigation: {
+        prevEl: '.about__gallery-arrow_left',
+        nextEl: '.about__gallery-arrow_right'
+    },
+
+    breakpoints: {
+        320: {
+            slidesPerView:1,
+        },
+        768: {
+            slidesPerView:2,
+        },
+        1024: {
+            slidesPerView:3,
+        },
+        1320: {
+            slidesPerView:4,
+        }
+    },
+});
 
 
 const stockPopupBtns = document.querySelectorAll('.stock__item-btn');
